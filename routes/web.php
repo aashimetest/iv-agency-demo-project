@@ -14,5 +14,5 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ContactController::class, 'create']);
-Route::post('/process', [ContactController::class, 'store']);
+Route::get('/', [ContactController::class, 'create'])->name('contact.view');
+Route::post('/contact/submit', [ContactController::class, 'store'])->name('contact.submit');

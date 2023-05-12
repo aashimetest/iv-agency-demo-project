@@ -1,0 +1,244 @@
+/* Variables */
+:root {
+  --primary-color: #1C89C6;
+  --light-grey: #eeeeee;
+  --medium-grey: #787878;
+  --dark-grey: #444444;
+  --error-color: #BE3600;
+  --light-background: #F8F8F8;
+}
+
+/* Reset Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-danger {
+  color: var(--error-color);
+}
+
+.lazyload {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+.lazyload--loaded {
+  opacity: 1;
+  visibility: visible;
+  background-color: var(--light-grey);
+  border-radius: 100%;
+}
+
+/* Header Section */
+header {
+  background-color: #ffffff;
+  padding: 1% 0;
+  border-bottom: 1px solid var(--light-grey);
+}
+header #heading h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  color: var(--primary-color);
+}
+
+/* Ad Section */
+#AdSection {
+  padding: 4% 0;
+  background: var(--light-background);
+}
+#AdSection img {
+  width: 30px;
+}
+#AdSection .boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5%;
+}
+#AdSection .boxes .box {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid var(--light-grey);
+}
+#AdSection .boxes .box .ad-image {
+  width: 30px;
+  float: left;
+}
+#AdSection .boxes .box .ad-desc {
+  font-family: "Montserrat", sans-serif;
+  color: var(--medium-grey);
+  float: right;
+}
+
+/* Form Section */
+#FormSection {
+  padding: 5% 0;
+  margin: 0;
+}
+#FormSection .messages {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+#FormSection form .form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 5%;
+}
+#FormSection form .form-row .form-group {
+  flex-grow: 1;
+  margin-bottom: 30px;
+}
+#FormSection form .form-row .form-group input, #FormSection form .form-row .form-group select {
+  height: 35px;
+}
+#FormSection form .form-row .form-group textarea {
+  height: 75px;
+}
+#FormSection form .form-row .form-group input,
+#FormSection form .form-row .form-group select,
+#FormSection form .form-row .form-group textarea {
+  width: 100%;
+  padding-left: 10px;
+}
+#FormSection form .form-row .form-group label {
+  color: var(--medium-grey);
+}
+#FormSection form .form-row .form-group .invalid-feedback {
+  color: var(--error-color);
+}
+#FormSection form .form-row .submit-group {
+  width: 40%;
+}
+#FormSection form .form-row .submit-group .btn-submit {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  border: none;
+  width: 100%;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#FormSection form .form-row .submit-group .btn-submit:hover {
+  border: 1px solid var(--primary-color);
+}
+#FormSection form .required {
+  color: var(--primary-color);
+}
+#FormSection form .form-text-small {
+  font-size: smaller;
+  color: var(--medium-grey);
+}
+
+#phone-form-group {
+  width: 20%;
+}
+
+select {
+  width: 100%;
+}
+
+/* Footer Section */
+#Footer {
+  background-color: var(--light-background);
+  padding: 5% 0;
+}
+#Footer .boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2em;
+}
+#Footer .boxes .box-1 p {
+  margin-bottom: 30px;
+}
+#Footer .boxes .box-2 img {
+  border-radius: 25px;
+  border: 1px solid var(--primary-color);
+}
+#Footer .boxes .box-2 img:hover {
+  opacity: 0.9;
+}
+
+/* 
+MEDIA QUERIES
+*/
+/* Rules for mobile devices */
+@media only screen and (max-width: 767px) {
+  /* Ad Section */
+  #AdSection .boxes {
+    flex-direction: column;
+    padding: 6% 0 4% 0;
+  }
+  #AdSection .boxes .box {
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #AdSection .boxes .box .ad-desc {
+    width: 80%;
+  }
+  /* Form Section */
+  #FormSection {
+    padding: 10% 0 10% 0;
+    margin: 0;
+  }
+  #FormSection form .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  #FormSection form .form-row .submit-group {
+    width: 100%;
+  }
+  #phone-form-group {
+    width: 100%;
+  }
+  /* Footer Section */
+  #Footer {
+    padding: 10% 0 10% 0;
+  }
+  #Footer .boxes {
+    flex-direction: column;
+  }
+  #Footer .boxes .box-2 img {
+    width: 100%;
+  }
+}
+/* Rules for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Ad Section */
+  #AdSection .box .ad-desc {
+    width: 80%;
+  }
+  /* Footer Section */
+  #Footer .boxes {
+    flex-direction: column;
+  }
+  #Footer .boxes .box-2 img {
+    width: 100%;
+  }
+}
+

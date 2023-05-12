@@ -1,0 +1,303 @@
+/* Variables */
+:root {
+  --primary-color: #1C89C6;
+  --light-grey: #eeeeee;
+  --medium-grey: #787878;
+  --dark-grey: #444444;
+  --error-color: #BE3600;
+  --light-background: #F8F8F8;
+}
+
+/* Reset Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-danger {
+  color: var(--error-color);
+}
+
+.lazyload {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+
+  &--loaded {
+    opacity: 1;
+    visibility: visible;
+    background-color: var(--light-grey);
+    border-radius: 100%;
+  }
+}
+
+/* Header Section */
+header {
+  background-color: #ffffff;
+  padding: 1% 0;
+  border-bottom: 1px solid var(--light-grey);
+
+  #heading {
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 110%;
+      letter-spacing: 0.01em;
+      color: var(--primary-color);
+    }
+  }
+}
+
+/* Ad Section */
+#AdSection {
+  padding: 4% 0;
+  background: var(--light-background);
+
+  img {
+    width: 30px;
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5%;
+
+    .box {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      width: 100%;
+      border: 1px solid var(--light-grey);
+
+      .ad-image {
+        width: 30px;
+        float: left;
+      }
+
+      .ad-desc {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--medium-grey);
+        float: right;
+      }
+    }
+  }
+}
+
+/* Form Section */
+#FormSection {
+  padding: 5% 0;
+  margin: 0;
+
+  .messages{
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+  form {
+    .form-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 5%;
+
+      .form-group {
+        flex-grow: 1;
+        margin-bottom: 30px;
+
+        input, select{
+          height: 35px;
+        }
+
+        textarea {
+          height: 75px;
+        }
+
+        input,
+        select,
+        textarea{
+          width: 100%;
+          padding-left: 10px;
+        }
+
+        label {
+          color: var(--medium-grey);
+        }
+
+        .invalid-feedback{
+          color: var(--error-color);
+        }
+      }
+
+      .submit-group {
+        width: 40%;
+
+        .btn-submit {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          background-color: var(--primary-color);
+          border: none;
+          width: 100%;
+          padding: 15px 20px;
+          color: #ffffff;
+          text-transform: uppercase;
+          font-size: 1em;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            border: 1px solid var(--primary-color);
+          }
+        }
+      }
+    }
+
+    .required {
+      color: var(--primary-color);
+    }
+
+    .form-text-small {
+      font-size: smaller;
+      color: var(--medium-grey);
+    }
+  }
+}
+//select input alignment issue - workaround.
+#phone-form-group{
+  width: 20%;
+}
+select{
+  width: 100%;
+}
+
+/* Footer Section */
+#Footer {
+  background-color: var(--light-background);
+  padding: 5% 0;
+
+  .boxes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2em;
+
+  .box-1{
+    p{
+      margin-bottom: 30px;
+    }
+  }
+
+    .box-2 {
+      img {
+        border-radius: 25px;
+        border: 1px solid var(--primary-color);
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+/* 
+MEDIA QUERIES
+*/
+
+/* Rules for mobile devices */
+@media only screen and (max-width: 767px) {
+  
+  /* Ad Section */
+  #AdSection {
+    .boxes {
+      flex-direction: column;
+      padding: 6% 0 4% 0;
+      
+      .box {
+        padding: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+        
+        .ad-desc {
+          width: 80%;
+        }
+      }
+    }
+  }
+  
+  /* Form Section */
+  #FormSection {
+    padding: 10% 0 10% 0;
+    margin: 0;
+    
+    form {
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        
+        .submit-group {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  //select input alignment issue - workaround.
+  #phone-form-group{
+    width: 100%;
+  }
+
+  /* Footer Section */
+  #Footer {
+    padding: 10% 0 10% 0;
+    
+    .boxes {
+      flex-direction: column;
+      
+      .box-2 {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* Rules for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+ /* Ad Section */
+  #AdSection {
+    .box {
+      .ad-desc {
+        width: 80%;
+      }
+    }
+  }
+
+  /* Footer Section */
+  #Footer {
+    .boxes {
+      flex-direction: column;
+      
+      .box-2 {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
