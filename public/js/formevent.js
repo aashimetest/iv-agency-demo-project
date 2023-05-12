@@ -16,15 +16,13 @@ submitBtn.addEventListener('click', (e) => {
     phone: phone,
     subject: subject,
     message: message
+  }, {
+    headers: {
+      'Accept': 'application/json'
+    }
   })
   .then(response => {
-    if (response && response.data && response.data.success) {
-        console.log(response.data.message);
-        form.reset();
-        document.getElementById('response-message').innerHTML = response.data.message;
-        document.querySelectorAll('.invalid-feedback').forEach(e => e.innerHTML = '');
-        alert('hello world');
-    } else if (response && response.data && response.data.errors) {
+    if (response && response.data && response.data.errors) {
         let errors = response.data.errors;
         Object.keys(errors).forEach(key => {
             let element = document.getElementById(key);
@@ -33,7 +31,10 @@ submitBtn.addEventListener('click', (e) => {
         });
         // form.reset();
     } else {
-        console.log('Unexpected server response:', response.data);
+        // console.log('Unexpected server response:', response.data.message);
+        document.getElementById('response-message').innerHTML = 'Thank you for your message! We will review your submission and respond to you in 24-48 hours.';
+        document.querySelectorAll('.invalid-feedback').forEach(e => e.innerHTML = '');
+        form.reset();
     }
   })
   .catch(error => console.log(error));

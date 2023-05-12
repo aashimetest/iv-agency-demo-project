@@ -1,13 +1,4 @@
 /* Variables */
-:root {
-  --primary-color: #1C89C6;
-  --light-grey: #eeeeee;
-  --medium-grey: #787878;
-  --dark-grey: #444444;
-  --error-color: #BE3600;
-  --light-background: #F8F8F8;
-}
-
 /* Reset Styles */
 * {
   box-sizing: border-box;
@@ -27,7 +18,7 @@ body {
 }
 
 .text-danger {
-  color: var(--error-color);
+  color: #BE3600;
 }
 
 .lazyload {
@@ -38,7 +29,7 @@ body {
 .lazyload--loaded {
   opacity: 1;
   visibility: visible;
-  background-color: var(--light-grey);
+  background-color: #eeeeee;
   border-radius: 100%;
 }
 
@@ -46,7 +37,7 @@ body {
 header {
   background-color: #ffffff;
   padding: 1% 0;
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid #eeeeee;
 }
 header #heading h1 {
   font-family: "Montserrat", sans-serif;
@@ -54,13 +45,13 @@ header #heading h1 {
   font-size: 32px;
   line-height: 110%;
   letter-spacing: 0.01em;
-  color: var(--primary-color);
+  color: #1C89C6;
 }
 
 /* Ad Section */
 #AdSection {
   padding: 4% 0;
-  background: var(--light-background);
+  background: #F8F8F8;
 }
 #AdSection img {
   width: 30px;
@@ -76,7 +67,7 @@ header #heading h1 {
   padding: 15px;
   border-radius: 10px;
   width: 100%;
-  border: 1px solid var(--light-grey);
+  border: 1px solid #eeeeee;
 }
 #AdSection .boxes .box .ad-image {
   width: 30px;
@@ -84,7 +75,7 @@ header #heading h1 {
 }
 #AdSection .boxes .box .ad-desc {
   font-family: "Montserrat", sans-serif;
-  color: var(--medium-grey);
+  color: #787878;
   float: right;
 }
 
@@ -94,7 +85,7 @@ header #heading h1 {
   margin: 0;
 }
 #FormSection .messages {
-  color: var(--primary-color);
+  color: #1C89C6;
   margin-bottom: 30px;
 }
 #FormSection form .form-row {
@@ -120,10 +111,10 @@ header #heading h1 {
   padding-left: 10px;
 }
 #FormSection form .form-row .form-group label {
-  color: var(--medium-grey);
+  color: #787878;
 }
 #FormSection form .form-row .form-group .invalid-feedback {
-  color: var(--error-color);
+  color: #BE3600;
 }
 #FormSection form .form-row .submit-group {
   width: 40%;
@@ -132,7 +123,7 @@ header #heading h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  background-color: var(--primary-color);
+  background-color: #1C89C6;
   border: none;
   width: 100%;
   padding: 15px 20px;
@@ -143,14 +134,14 @@ header #heading h1 {
   cursor: pointer;
 }
 #FormSection form .form-row .submit-group .btn-submit:hover {
-  border: 1px solid var(--primary-color);
+  border: 1px solid #1C89C6;
 }
 #FormSection form .required {
-  color: var(--primary-color);
+  color: #1C89C6;
 }
 #FormSection form .form-text-small {
   font-size: smaller;
-  color: var(--medium-grey);
+  color: #787878;
 }
 
 #phone-form-group {
@@ -163,7 +154,7 @@ select {
 
 /* Footer Section */
 #Footer {
-  background-color: var(--light-background);
+  background-color: #F8F8F8;
   padding: 5% 0;
 }
 #Footer .boxes {
@@ -177,7 +168,7 @@ select {
 }
 #Footer .boxes .box-2 img {
   border-radius: 25px;
-  border: 1px solid var(--primary-color);
+  border: 1px solid #1C89C6;
 }
 #Footer .boxes .box-2 img:hover {
   opacity: 0.9;

@@ -25,7 +25,11 @@ Contact Form Demo Project
 <section id="FormSection">
 
     <!-- Ajax response goes here -->
-    <div id="response-message"></div>
+    <div class="container messages">
+        <div id="response-message"></div>
+    </div>
+    <!-- end ajax response -->
+
 
     <!-- Return Response for none-ajax submissions. -->
     <div class="container messages">
@@ -33,6 +37,7 @@ Contact Form Demo Project
     </div>
     <!-- end non-ajax response. -->
 
+    
     <div class="container">
         <form id="contact-form" action="{{ route('contact.submit') }}" method="POST">
             @csrf

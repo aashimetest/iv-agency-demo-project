@@ -51,15 +51,18 @@ class ContactController extends Controller
             'subject' => $request->get('subject'),
             'message' => $request->get('message'),
         ]);
-        $contact->save();
 
+        //save to db
+        $contact->save();
 
         $message = 'Thank you for your message! We will review your submission and respond to you in 24-48 hours.';
 
+        //return json response for ajax request
         if ($request->ajax()) {
             return response()->json(['success' => true, 'message' => $message]);
         }
         
+        //return session response for non ajax request.
         return redirect(route('contact.view'))->with('message', $message);
     }
 }

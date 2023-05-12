@@ -1,12 +1,12 @@
 /* Variables */
-:root {
-  --primary-color: #1C89C6;
-  --light-grey: #eeeeee;
-  --medium-grey: #787878;
-  --dark-grey: #444444;
-  --error-color: #BE3600;
-  --light-background: #F8F8F8;
-}
+
+  $primary-color: #1C89C6;
+  $light-grey: #eeeeee;
+  $medium-grey: #787878;
+  $dark-grey: #444444;
+  $error-color: #BE3600;
+  $light-background: #F8F8F8;
+
 
 /* Reset Styles */
 * {
@@ -27,7 +27,7 @@ body {
 }
 
 .text-danger {
-  color: var(--error-color);
+  color: $error-color;
 }
 
 .lazyload {
@@ -38,7 +38,7 @@ body {
   &--loaded {
     opacity: 1;
     visibility: visible;
-    background-color: var(--light-grey);
+    background-color: $light-grey;
     border-radius: 100%;
   }
 }
@@ -47,7 +47,7 @@ body {
 header {
   background-color: #ffffff;
   padding: 1% 0;
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid $light-grey;
 
   #heading {
     h1 {
@@ -56,7 +56,7 @@ header {
       font-size: 32px;
       line-height: 110%;
       letter-spacing: 0.01em;
-      color: var(--primary-color);
+      color: $primary-color;
     }
   }
 }
@@ -64,7 +64,7 @@ header {
 /* Ad Section */
 #AdSection {
   padding: 4% 0;
-  background: var(--light-background);
+  background: $light-background;
 
   img {
     width: 30px;
@@ -81,7 +81,7 @@ header {
       padding: 15px;
       border-radius: 10px;
       width: 100%;
-      border: 1px solid var(--light-grey);
+      border: 1px solid $light-grey;
 
       .ad-image {
         width: 30px;
@@ -90,7 +90,7 @@ header {
 
       .ad-desc {
         font-family: 'Montserrat', sans-serif;
-        color: var(--medium-grey);
+        color: $medium-grey;
         float: right;
       }
     }
@@ -103,7 +103,7 @@ header {
   margin: 0;
 
   .messages{
-    color: var(--primary-color);
+    color: $primary-color;
     margin-bottom: 30px;
   }
   form {
@@ -133,11 +133,11 @@ header {
         }
 
         label {
-          color: var(--medium-grey);
+          color: $medium-grey;
         }
 
         .invalid-feedback{
-          color: var(--error-color);
+          color: $error-color;
         }
       }
 
@@ -148,7 +148,7 @@ header {
           font-family: 'Montserrat', sans-serif;
           font-weight: 500;
           font-size: 16px;
-          background-color: var(--primary-color);
+          background-color: $primary-color;
           border: none;
           width: 100%;
           padding: 15px 20px;
@@ -159,19 +159,19 @@ header {
           cursor: pointer;
 
           &:hover {
-            border: 1px solid var(--primary-color);
+            border: 1px solid $primary-color;
           }
         }
       }
     }
 
     .required {
-      color: var(--primary-color);
+      color: $primary-color;
     }
 
     .form-text-small {
       font-size: smaller;
-      color: var(--medium-grey);
+      color: $medium-grey;
     }
   }
 }
@@ -185,7 +185,7 @@ select{
 
 /* Footer Section */
 #Footer {
-  background-color: var(--light-background);
+  background-color: $light-background;
   padding: 5% 0;
 
   .boxes{
@@ -203,7 +203,7 @@ select{
     .box-2 {
       img {
         border-radius: 25px;
-        border: 1px solid var(--primary-color);
+        border: 1px solid $primary-color;
 
         &:hover {
           opacity: 0.9;
